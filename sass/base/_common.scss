@@ -1,0 +1,38 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+ul,
+ol {
+    padding-left: 0;
+}
+
+img {
+    display: block;
+}
+
+.link {
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--main-font-family);
+    letter-spacing: 0.03em;
+    color: var(--main-font);
+    background-color: var(--bgc-color);
+}
+
+.list {
+    list-style: none;
+    font-style: normal;
+    display: flex;
+}
