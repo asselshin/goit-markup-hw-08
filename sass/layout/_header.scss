@@ -20,6 +20,11 @@
         border: none;
         padding: 0;
         line-height: 0;
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus {
+            fill: var(--accent-color);
+        }
     }
     .page-header {
         padding-top: 10px;
@@ -44,7 +49,7 @@
     .menu__item {
         position: relative;
 
-        &:not(:last-child){
+        &:not(:last-child) {
             margin-right: 50px;
         }
         &:last-child {
