@@ -181,6 +181,12 @@
         fill: var(--accent-color);
     }
 }
+@media screen and (max-width: 479px) {
+    .modal-form__text {
+        display: block;
+    }
+    
+}
 
 @media screen and (min-width: 480px){
     .modal{
