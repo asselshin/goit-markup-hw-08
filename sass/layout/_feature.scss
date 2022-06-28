@@ -4,7 +4,6 @@
 }
 .feature__wrapper {
     @extend %align;
-    max-width: 450px;
     height: 120px;
     background-color: var(--third-bgc-color);
     margin-bottom: 30px;
@@ -36,9 +35,6 @@
         width: calc((100% - 60px) / 2);
         margin: 15px;
     }
-    .feature__wrapper {
-        width: 354px;
-    }
     .feature__title {
         text-align: left;
     }
@@ -51,8 +47,5 @@
     .feature__item {
         width: calc((100% - 120px) / 4);
         margin: 15px;
-    }
-    .feature__wrapper {
-        width: 270px;
     }
 }

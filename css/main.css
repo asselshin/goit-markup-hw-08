@@ -56,6 +56,8 @@ ol {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -393,9 +395,46 @@ body {
   margin-left: auto;
   max-width: 1600px;
   background-color: var(--hero-bg-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/bg-hero.jpg");
+  background-image: linear-gradient(rgba(176, 180, 222, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/mobile/hero/hero@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: url("../images/tablet/hero/hero.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/tablet/hero/hero@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: url("../images/desktop/hero/hero.jpg");
+  }
+  .hero__title {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../images/desktop/hero/hero@2x.jpg");
+  }
 }
 
 .hero__title {
@@ -418,25 +457,12 @@ body {
   margin-right: auto;
 }
 
-@media screen and (min-width: 1200px) {
-  .hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
-  .hero__title {
-    max-width: 696px;
-    font-size: 44px;
-    line-height: 1.36;
-  }
-}
-
 .feature {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 .feature__wrapper {
-  max-width: 450px;
   height: 120px;
   background-color: var(--third-bgc-color);
   margin-bottom: 30px;
@@ -469,9 +495,6 @@ body {
     width: calc((100% - 60px) / 2);
     margin: 15px;
   }
-  .feature__wrapper {
-    width: 354px;
-  }
   .feature__title {
     text-align: left;
   }
@@ -485,9 +508,6 @@ body {
   .feature__item {
     width: calc((100% - 120px) / 4);
     margin: 15px;
-  }
-  .feature__wrapper {
-    width: 270px;
   }
 }
 
@@ -539,11 +559,6 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.team__img {
-  width: 100%;
-  object-fit: contain;
-}
-
 .team__title {
   font-weight: 500;
   font-size: 16px;
@@ -571,23 +586,11 @@ body {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .team__img {
-    width: 450px;
-    height: 460px;
-    object-fit: fill;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .team__list {
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
-  }
-  .team__img {
-    width: 354px;
-    height: 374px;
   }
   .team__item {
     width: calc((100% - 60px) / 2);
@@ -599,10 +602,6 @@ body {
   .team {
     padding-top: 94px;
     padding-bottom: 94px;
-  }
-  .team__img {
-    width: 270px;
-    height: 260px;
   }
   .team__list {
     flex-wrap: no-wrap;
@@ -886,10 +885,6 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-img {
-  width: 100%;
-}
-
 .portfolio-img-wrap {
   position: relative;
   overflow: hidden;
@@ -916,16 +911,6 @@ body {
   transform: translateY(0%);
 }
 
-@media screen and (min-width: 480px) {
-  .portfolio-img-wrap {
-    width: 450px;
-    height: 294px;
-  }
-  .portfolio-img {
-    object-fit: cover;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .portfolio-list {
     display: flex;
@@ -938,9 +923,6 @@ body {
   }
   .portfolio-list-item:nth-last-child(-n+2) {
     margin-bottom: 0;
-  }
-  .portfolio-img-wrap {
-    width: 100%;
   }
   .portfolio-btn-list {
     justify-content: center;
