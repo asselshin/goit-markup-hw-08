@@ -90,6 +90,8 @@
         margin-bottom: 10px;
     }
     .contact__link {
+        display: flex;
+        align-items: center;
         font-weight: 500;
         font-size: 12px;
         line-height: 1.16;
@@ -127,11 +129,12 @@
 
     .contact__item:not(:last-child) {
         margin-right: 30px;
+        margin-bottom: 0;
     }
     .page-header__logo {
         margin-right: 93px;
     }
-    .contact__link {
+    .contact__link {        
         font-size: 14px;
         padding-top: 32px;
         padding-bottom: 32px;

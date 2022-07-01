@@ -31,9 +31,6 @@
     margin-bottom: 40px;
 }
 
-.portfolio-btn-item:nth-child(-n+3) {
-    margin-bottom: 15px;
-}
 .portfolio-btn-item:not(:last-child) {
     margin-right: 8px;
 }
@@ -55,10 +52,6 @@
 
 .portfolio-list {
     display: block; 
-}
-
-.portfolio-list-item {
-    margin-bottom: 30px;
 }
 
 .portfolio-item {
@@ -104,29 +97,43 @@
         transform: translateY(0%);
     }
 }
+@media screen and (max-width: 480px) {
+    .portfolio-card {
+            overflow: scroll;
+    }
+}
 
-@media screen and (min-width:768px) {
+@media screen and (max-width: 767.98px) {
+    .portfolio-btn-item:nth-child(-n+3) {
+        margin-bottom: 15px;
+    }
+    .portfolio-list-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 768px) {
     .portfolio-list {
         display: flex;
         flex-wrap:  wrap;
         margin: -15px;
     }
+    .portfolio-list-link {
+        display: flex;
+        flex-direction: column;
+    }
+    .portfolio-item {
+        flex-grow: 1;
+    }
+
     .portfolio-list-item {
+        display: flex;
         width: calc((100% - 60px) / 2);
         margin: 15px;
-        
-        &:nth-last-child(-n+2) {
-            margin-bottom: 0;
-        }
     }    
     .portfolio-btn-list {
         justify-content: center;
         margin-bottom: 30px;
-    }
-}
-@media screen and (min-width:768px) and (max-width: 1199.98px) {
-    .first-card {
-        padding-bottom: 56px;
     }
 }
 

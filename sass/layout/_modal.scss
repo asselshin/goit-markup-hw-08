@@ -182,10 +182,18 @@
     }
 }
 @media screen and (max-width: 479px) {
+    .modal {
+        padding: 30px;
+    }
     .modal-form__text {
         display: block;
     }
-    
+    .modal-form__textarea {
+        height: 80px;
+    }
+    .modal-form__input {
+        height: 30px;
+    }   
 }
 
 @media screen and (min-width: 480px){
